@@ -1,0 +1,65 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 32,
+    "margin-top": 5,
+    "margin-left": 10,
+    "margin-right": 10,
+    "spacing": 0,
+
+    "modules-left": ["custom/launcher", "hyprland/window", "custom/firefox", "custom/spotify", "custom/cava"],
+    "modules-center": ["hyprland/workspaces"],
+    "modules-right": [
+        "pulseaudio", 
+        "bluetooth", 
+        "backlight", 
+        "disk", 
+        "cpu", 
+        "memory", 
+        "network", 
+        "battery", 
+        "custom/power",
+        "clock"
+    ],
+
+    "custom/launcher": { "format": "Apps", "on-click": "rofi -show drun || wofi --show drun" },
+
+    "hyprland/window": { "format": "{class}", "separate-outputs": true, "rewrite": { "": "Desktop" } },
+
+    "hyprland/workspaces": {
+        "disable-scroll": false,
+        "all-outputs": true,
+        "on-click": "activate",
+        "format": "{icon}",
+        "format-icons": {
+            "active": "",
+            "default": "",
+            "urgent": ""
+        }
+    },
+
+    "disk": { "format": "󰋊 {percentage_used}%", "path": "/" },
+    "cpu": { "format": "C {usage}%", "interval": 2 },
+    "memory": { "format": "M {percentage}%", "interval": 2 },
+    "pulseaudio": { "format": "{icon}  {volume}%", "format-icons": ["", "", ""], "on-click": "pavucontrol" },
+    "bluetooth": { "format": " on", "format-disabled": " off", "on-click": "blueman-manager" },
+    "backlight": { "format": "󰃠  {percent}%", "on-click": "brightnessctl set +5%", "on-scroll-up": "brightnessctl set +5%", "on-scroll-down": "brightnessctl set 5%-", "on-click-right": "brightnessctl set 5%" },
+    "network": { "format-wifi": "  {signalStrength}%", "on-click": "nm-connection-editor" },
+    "battery": { "format": "{icon} {capacity}%", "format-icons": ["", "", "", "", ""] },
+    "custom/power": { "format": "", "on-click": "shutdown now" },
+    "clock": { "format": "{:%H:%M}" },
+    "custom/spotify": {
+       "format": "",  // Spotify ikonu
+       "on-click": "spotify", // Tıklayınca Spotify'ı açar
+       "tooltip": false
+        },
+    "custom/cava": {
+        "format": "{}",
+        "exec": "~/.config/waybar/cava.sh"
+    },
+   "custom/firefox": {
+    "format": " ",  
+    "tooltip-format": "Firefox'u Aç",
+    "on-click": "firefox"
+    },
+}

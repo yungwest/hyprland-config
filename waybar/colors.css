@@ -1,0 +1,16 @@
+/* Surrealism Palette */
+@define-color background #15121b; /* Koyu Mor/Siyah Arkaplan */
+
+/* İkonlar ve Normal Metinler (Kemik Grisi) */
+@define-color on_secondary_container #b5b6bd; 
+
+/* Aktif Workspace ve Hover Durumları (Baskın Kırmızı) */
+@define-color on_primary_container #ba464f;
+
+/* Diğer Detaylar (Soluk Pembe ve Petrol Mavisi) */
+@define-color on_primary #e09590; 
+@define-color secondary #6a7c86;
+
+/* Gereksiz hataları önlemek için fallback tanımlar */
+@define-color primary #ba464f;
+@define-color error #ba464f;
