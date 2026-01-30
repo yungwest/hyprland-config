@@ -1,0 +1,18 @@
+* {
+    /* --- Temel Renkler (Görselden) --- */
+    bg0:     #15121b; /* Arkaplan (Koyu Mor/Siyah) */
+    bg1:     #1e1a26; /* Input Bar (Bg0'ın çok az açığı) */
+    bg2:     #ba464f; /* Seçili Öğe Arkaplanı (Baskın Kırmızı) */
+    bg3:     #6a7c86; /* Kenarlıklar (Petrol Mavisi) */
+    
+    fg0:     #b5b6bd; /* Ana Metin (Kemik Grisi) */
+    fg1:     #e09590; /* Soluk Pembe */
+
+    /* --- Değişken Eşleşmeleri --- */
+    red:     #ba464f;
+    blue:    #e09590; /* Prompt rengi için pembeyi kullandım */
+    cyan:    #6a7c86; /* Placeholder için petrol mavisi */
+    
+    accent:  @fg1;    /* Aktif eleman metni */
+    urgent:  @red;    /* Acil durum */
+}
